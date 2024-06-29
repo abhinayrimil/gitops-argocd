@@ -1,0 +1,17 @@
+{
+    "jenkins-runner.jobs": {
+        "gitops-argocd": {
+            "isDefault": true,
+            "runWith": "jenkins-master",
+            "name": "gitops-argocd"
+        }
+    },
+    "jenkins-runner.hostConfigs": {
+        "jenkins-master": {
+            "url": "http://ec2-43-204-12-73.ap-south-1.compute.amazonaws.com:8080",
+            "user": "rimil",
+            "password": "0114Rimil!",
+            "useCrumbIssuer": true
+        }
+    }
+}
