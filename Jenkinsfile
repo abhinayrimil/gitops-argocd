@@ -48,5 +48,16 @@ pipeline{
                 }
             }
         }
+        stage('Updating K8 deployment file'){
+            steps{
+                script{
+                    sh """
+                    cat deployment.yaml
+                    sed -i 's|${IMAGE_NAME}.*|${IMAGE_NAME}|g' deployment.yaml
+                    cat deployment.yaml
+                    """
+                }
+            }
+        }
     }
 }
