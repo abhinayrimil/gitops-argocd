@@ -4,7 +4,7 @@ pipeline{
         DOCKERHUB_USERNAME = "abhinayrimil"
         APP_NAME = "gitops-argocd"
         IMAGE_TAG = "${BUILD_NUMBER}"
-        IMAGE_NAME = "${DOCKERHUB_USERNAME}" + "${APP_NAME}"
+        IMAGE_NAME = "${DOCKERHUB_USERNAME}/${APP_NAME}:${IMAGE_TAG}"
         REGISTRY_CREDS = "dockerhub"  
     }
 
@@ -35,11 +35,18 @@ pipeline{
         stage('Push Docker Image'){
             steps{
                 script{
-                    docker.withRegistry('',REGISTRY_CREDS){
-                        docker_image.push("${BUILD_NUMBER}")
-                        docker_image.push('latest')
+                    docker.withRegistry('https://index.docker.io/v1/',REGISTRY_CREDS){
+                        docker_image.push()
                     }
                 }
+            }
+        }
+        stage('Delete Docker images'){
+            steps{
+                script{
+                    sh "docker rmi ${IMAGE_NAME}"
+                }
+            }
         }
     }
 }
