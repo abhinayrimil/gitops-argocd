@@ -5,7 +5,7 @@ metadata:
 spec:
   selector:
     matchLabels:
-    app: flask-app
+      app: flask-app
   template:
     metadata:
       labels:
