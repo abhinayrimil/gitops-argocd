@@ -53,7 +53,7 @@ pipeline{
                 script{
                     sh """
                     cat deployment.yaml
-                    sed -i 's|${APP_NAME}.*|${IMAGE_NAME}|g' deployment.yaml
+                    sed -i '' "s|\(${APP_NAME}.*\)|\1 ${IMAGE_TAG}|g" deployment.yaml
                     cat deployment.yaml
                     """
                 }
