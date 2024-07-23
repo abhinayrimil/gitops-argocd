@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/gitops-argocd:48
+        image: abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/gitops-argocd:49
         resources:
           limits:
             memory: "128Mi"
