@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
       - name: flask-app
-        image: abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/gitops-argocd:78
+        image: abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/abhinayrimil/gitops-argocd:79
         resources:
           limits:
             memory: "128Mi"
