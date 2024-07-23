@@ -53,9 +53,26 @@ pipeline{
                 script{
                     sh """
                     cat deployment.yaml
-                    sed -i 's|${IMAGE_NAME}.*|${IMAGE_NAME}|g' deployment.yaml
+                    sed -i 's|${APP_NAME}.*|${IMAGE_NAME}|g' deployment.yaml
                     cat deployment.yaml
                     """
+                }
+            }
+        }
+        stage('Push the modified deployment file to Git'){
+            steps{
+                script{
+                    sh """
+                    git config --global user.name "abhinayrimil"
+                    git config --global user.email "abhinayrimil@gmail.com"
+                    git add deployment.yaml
+                    git commit -m "Updating deployment with image tag"
+                    """
+                    withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]) {
+                    sh "git push https://github.com/abhinayrimil/gitops-argocd.git main"
+                    }
+
+                    
                 }
             }
         }
